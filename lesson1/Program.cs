@@ -23,3 +23,4 @@
 //double x = double.Parse(Console.ReadLine());
 //double y=Math.Exp(7*x);
 //Console.WriteLine($"y={y:f2}");
+
