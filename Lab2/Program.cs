@@ -33,29 +33,47 @@
 //    Console.WriteLine(e.Message);
 //}
 
-try
-{
-    Console.Write("Введите a:");
-    double a = double.Parse(Console.ReadLine());
-    Console.Write("Введите b:");
-    double b = double.Parse(Console.ReadLine());
-    Console.Write("Введите c:");
-    double c = double.Parse(Console.ReadLine());
-    double d = b * b - 4 * a * c;
-    if (d > 0)
-    {
-        double x1 = (-b + Math.Sqrt(d)) / (2 * a);
-        double x2 = (-b - Math.Sqrt(d)) / (2 * a);
-        Console.WriteLine($"x1={x1:F2} x2={x2:F2}");
-    }
-    else if (d == 0)
-    {
-        double x = -b/ (2 * a);
-        Console.WriteLine($"x={x:F2}");
-    }
-    else Console.WriteLine();
-}
-catch (Exception e)
-{
-    Console.WriteLine(e.Message);
-}
+//try
+//{
+//    Console.Write("Введите a:");
+//    double a = double.Parse(Console.ReadLine());
+//    Console.Write("Введите b:");
+//    double b = double.Parse(Console.ReadLine());
+//    Console.Write("Введите c:");
+//    double c = double.Parse(Console.ReadLine());
+//    double d = b * b - 4 * a * c;
+//    if (d > 0)
+//    {
+//        double x1 = (-b + Math.Sqrt(d)) / (2 * a);
+//        double x2 = (-b - Math.Sqrt(d)) / (2 * a);
+//        Console.WriteLine($"x1={x1:F2} x2={x2:F2}");
+//    }
+//    else if (d == 0)
+//    {
+//        double x = -b/ (2 * a);
+//        Console.WriteLine($"x={x:F2}");
+//    }
+//    else Console.WriteLine();
+//}
+//catch (Exception e)
+//{
+//    Console.WriteLine(e.Message);
+//}
+
+//вариант 28. Базовый уровень
+//Console.Write("Введите x:");
+//double x = double.Parse(Console.ReadLine());
+//Console.WriteLine((x<3)||(x>3));
+
+//вариант 27. Средний уровень
+//Console.Write("Введите a:");
+//double a = double.Parse(Console.ReadLine());
+//Console.WriteLine(a<0);
+
+//вариант 28. Высокий уровень
+Console.Write("Введите x:");
+double x = double.Parse(Console.ReadLine());
+Console.Write("Введите y:");
+double y = double.Parse(Console.ReadLine());
+Console.WriteLine((y>=0)&&((y>=x+1)&&(y<=x+2)||(y<=-x+1)&&(y<=-x+2)));
+
