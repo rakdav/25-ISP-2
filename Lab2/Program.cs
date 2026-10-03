@@ -345,30 +345,64 @@
 //}
 
 
-try
+//try
+//{
+//    Console.Write("Введите число:");
+//    double x = double.Parse(Console.ReadLine());
+//    if(x%100>=11&& x % 100 <= 14) Console.WriteLine($"{x} рублей");
+//    else
+//    {
+//        switch (x % 10)
+//        {
+//            case 1:
+//                Console.WriteLine($"{x} рубль");
+//                break;
+//            case 2:
+//            case 3:
+//            case 4:
+//                Console.WriteLine($"{x} рубля");
+//                break;
+//            default:
+//                Console.WriteLine($"{x} рублей");
+//                break;
+//        }
+//    }
+//}
+//catch (Exception e)
+//{
+//    Console.WriteLine(e.Message);
+//}
+
+Console.Write("Введите число:");
+int x = int.Parse(Console.ReadLine());
+switch (x)
 {
-    Console.Write("Введите число:");
-    double x = double.Parse(Console.ReadLine());
-    if(x%100>=11&& x % 100 <= 14) Console.WriteLine($"{x} рублей");
-    else
-    {
-        switch (x % 10)
+    case 1:
         {
-            case 1:
-                Console.WriteLine($"{x} рубль");
-                break;
-            case 2:
-            case 3:
-            case 4:
-                Console.WriteLine($"{x} рубля");
-                break;
-            default:
-                Console.WriteLine($"{x} рублей");
-                break;
+            double R1=6, R2 = 10, R3 = 2;
+            double RPosl=R1+ R2 + R3;
+            Console.WriteLine($"Последовательное соединение: {RPosl:F2}");
+            double RPar = (R1*R2*R3)/(R2*R3 + R1*R3 + R1*R2);
+            Console.WriteLine($"Параллельное соединение: {RPar:F2}");
         }
-    }
-}
-catch (Exception e)
-{
-    Console.WriteLine(e.Message);
+        break;
+    case 2:
+        {
+            double R1 = 3, R2 = 5, R3 = 7;
+            double RPosl = R1 + R2 + R3;
+            Console.WriteLine($"Последовательное соединение: {RPosl:F2}");
+            double RPar = (R1 * R2 * R3) / (R2 * R3 + R1 * R3 + R1 * R2);
+            Console.WriteLine($"Параллельное соединение: {RPar:F2}");
+        }
+        break;
+    case 3:
+        {
+            double R1 = 4, R2 = 12, R3 = 8;
+            double RPosl = R1 + R2 + R3;
+            Console.WriteLine($"Последовательное соединение: {RPosl:F2}");
+            double RPar = (R1 * R2 * R3) / (R2 * R3 + R1 * R3 + R1 * R2);
+            Console.WriteLine($"Параллельное соединение: {RPar:F2}");
+        }
+        break;
+    default: break;
 }
