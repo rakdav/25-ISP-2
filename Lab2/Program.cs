@@ -373,36 +373,74 @@
 //    Console.WriteLine(e.Message);
 //}
 
-Console.Write("Введите число:");
-int x = int.Parse(Console.ReadLine());
-switch (x)
+//Console.Write("Введите число:");
+//int x = int.Parse(Console.ReadLine());
+//switch (x)
+//{
+//    case 1:
+//        {
+//            double R1=6, R2 = 10, R3 = 2;
+//            double RPosl=R1+ R2 + R3;
+//            Console.WriteLine($"Последовательное соединение: {RPosl:F2}");
+//            double RPar = (R1*R2*R3)/(R2*R3 + R1*R3 + R1*R2);
+//            Console.WriteLine($"Параллельное соединение: {RPar:F2}");
+//        }
+//        break;
+//    case 2:
+//        {
+//            double R1 = 3, R2 = 5, R3 = 7;
+//            double RPosl = R1 + R2 + R3;
+//            Console.WriteLine($"Последовательное соединение: {RPosl:F2}");
+//            double RPar = (R1 * R2 * R3) / (R2 * R3 + R1 * R3 + R1 * R2);
+//            Console.WriteLine($"Параллельное соединение: {RPar:F2}");
+//        }
+//        break;
+//    case 3:
+//        {
+//            double R1 = 4, R2 = 12, R3 = 8;
+//            double RPosl = R1 + R2 + R3;
+//            Console.WriteLine($"Последовательное соединение: {RPosl:F2}");
+//            double RPar = (R1 * R2 * R3) / (R2 * R3 + R1 * R3 + R1 * R2);
+//            Console.WriteLine($"Параллельное соединение: {RPar:F2}");
+//        }
+//        break;
+//    default: break;
+//}
+
+Console.Write("Введите номер варианта:");
+int n = int.Parse(Console.ReadLine());
+Console.Write("Введите x:");
+double x = double.Parse(Console.ReadLine());
+double a = 0, b = 0, z = 0,y=0;
+switch (n)
 {
     case 1:
         {
-            double R1=6, R2 = 10, R3 = 2;
-            double RPosl=R1+ R2 + R3;
-            Console.WriteLine($"Последовательное соединение: {RPosl:F2}");
-            double RPar = (R1*R2*R3)/(R2*R3 + R1*R3 + R1*R2);
-            Console.WriteLine($"Параллельное соединение: {RPar:F2}");
+            a = 1.5; b = 5.7; z =Math.Tan(Math.Abs(Math.Tan(b*x))) ;
         }
         break;
     case 2:
         {
-            double R1 = 3, R2 = 5, R3 = 7;
-            double RPosl = R1 + R2 + R3;
-            Console.WriteLine($"Последовательное соединение: {RPosl:F2}");
-            double RPar = (R1 * R2 * R3) / (R2 * R3 + R1 * R3 + R1 * R2);
-            Console.WriteLine($"Параллельное соединение: {RPar:F2}");
+            a = 3.7; b = 8.4; z = Math.Tan(Math.Abs(Math.Tan(b * x)));
         }
         break;
     case 3:
         {
-            double R1 = 4, R2 = 12, R3 = 8;
-            double RPosl = R1 + R2 + R3;
-            Console.WriteLine($"Последовательное соединение: {RPosl:F2}");
-            double RPar = (R1 * R2 * R3) / (R2 * R3 + R1 * R3 + R1 * R2);
-            Console.WriteLine($"Параллельное соединение: {RPar:F2}");
+            a = 4.4; b = 5.6; z = Math.Tan(Math.Abs(Math.Tan(b * x)));
         }
         break;
     default: break;
 }
+if (x <= a)
+{
+    y = Math.Pow(a, 3) + Math.Atan(Math.Pow(Math.Sin(b * x), 3)) + Math.Pow(Math.Cos(x * x), 2);
+}
+else if (x > a && x < Math.Log(b))
+{
+    y = Math.Sqrt((a + b * x) + 2) + Math.Sin(z * x);
+}
+else if (x >= Math.Log(b))
+{
+    y = Math.Atan(a + b * x + z);
+}
+Console.WriteLine($"y = {y:F2}");
