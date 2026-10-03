@@ -57,8 +57,6 @@
 //}
 //catch (Exception e)
 //{
-<<<<<<< HEAD
-
 //    Console.WriteLine(e.Message);
 //}
 
@@ -229,7 +227,7 @@
 //            Console.WriteLine("Нет такого дня недели");
 //            break;
 //    }
-    
+
 //}
 //catch (Exception e)
 //{
@@ -237,33 +235,33 @@
 //}
 
 
-try
-{
-    Console.Write("Введите номер месяца:");
-    int n = int.Parse(Console.ReadLine());
-    switch (n)
-    {
-        case 12:case 1:case 2:
-            Console.WriteLine("Зима");
-            break;
-        case 3: case 4:case 5:
-            Console.WriteLine("Весна");
-            break;
-        case 6:case 7:case 8:
-            Console.WriteLine("Лето");
-            break;
-        case 9:case 10:case 11:
-            Console.WriteLine("Осень");
-            break;
-        default:
-            Console.WriteLine("Нет такого месяца");
-            break;
-    }
-}
-catch (Exception e)
-{
-    Console.WriteLine(e.Message);
-}
+//try
+//{
+//    Console.Write("Введите номер месяца:");
+//    int n = int.Parse(Console.ReadLine());
+//    switch (n)
+//    {
+//        case 12:case 1:case 2:
+//            Console.WriteLine("Зима");
+//            break;
+//        case 3: case 4:case 5:
+//            Console.WriteLine("Весна");
+//            break;
+//        case 6:case 7:case 8:
+//            Console.WriteLine("Лето");
+//            break;
+//        case 9:case 10:case 11:
+//            Console.WriteLine("Осень");
+//            break;
+//        default:
+//            Console.WriteLine("Нет такого месяца");
+//            break;
+//    }
+//}
+//catch (Exception e)
+//{
+//    Console.WriteLine(e.Message);
+//}
 
 
 //вариант 28. Базовый уровень
@@ -277,9 +275,100 @@ catch (Exception e)
 //Console.WriteLine(a<0);
 
 //вариант 28. Высокий уровень
-Console.Write("Введите x:");
-double x = double.Parse(Console.ReadLine());
-Console.Write("Введите y:");
-double y = double.Parse(Console.ReadLine());
-Console.WriteLine((y>=0)&&((y>=x+1)&&(y<=x+2)||(y<=-x+1)&&(y<=-x+2)));
+//Console.Write("Введите x:");
+//double x = double.Parse(Console.ReadLine());
+//Console.Write("Введите y:");
+//double y = double.Parse(Console.ReadLine());
+//Console.WriteLine((y>=0)&&((y>=x+1)&&(y<=x+2)||(y<=-x+1)&&(y<=-x+2)));
 
+//try
+//{
+//    Console.Write("Введите номер карты");
+//    int n = int.Parse(Console.ReadLine());
+//    Console.Write("Введите номер масти");
+//    int m = int.Parse(Console.ReadLine());
+//    switch (n)
+//    {
+//        case 6:
+//            Console.Write("Шестерка ");
+//            break;
+//        case 7:
+//            Console.Write("Семерка ");
+//            break;
+//        case 8:
+//            Console.Write("Восьмерка ");
+//            break;
+//        case 9:
+//            Console.Write("Девятка ");
+//            break;
+//        case 10:
+//            Console.Write("Десятка ");
+//            break;
+//        case 11:
+//            Console.Write("Валет ");
+//            break;
+//        case 12:
+//            Console.Write("Дама ");
+//            break;
+//        case 13:
+//            Console.Write("Король ");
+//            break;
+//        case 14:
+//            Console.Write("Туз ");
+//            break;
+//        default:
+//            Console.WriteLine("Нет такой карты");
+//            break;
+//    }
+//    switch (m)
+//    {
+//        case 1:
+//            Console.WriteLine("пик");
+//            break;
+//        case 2:
+//            Console.WriteLine("треф");
+//            break;
+//        case 3:
+//            Console.WriteLine("бубен");
+//            break;
+//        case 4:
+//            Console.WriteLine("червей");
+//            break;
+//        default:
+//            Console.WriteLine("Нет такой масти");
+//            break;
+//    }
+//}
+//catch (Exception e)
+//{
+//    Console.WriteLine(e.Message);
+//}
+
+
+try
+{
+    Console.Write("Введите число:");
+    double x = double.Parse(Console.ReadLine());
+    if(x%100>=11&& x % 100 <= 14) Console.WriteLine($"{x} рублей");
+    else
+    {
+        switch (x % 10)
+        {
+            case 1:
+                Console.WriteLine($"{x} рубль");
+                break;
+            case 2:
+            case 3:
+            case 4:
+                Console.WriteLine($"{x} рубля");
+                break;
+            default:
+                Console.WriteLine($"{x} рублей");
+                break;
+        }
+    }
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
