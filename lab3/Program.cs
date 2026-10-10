@@ -137,25 +137,68 @@
 //    Console.WriteLine();
 //}
 
-try
+//try
+//{
+//    Console.Write("Введите k:");
+//    int k = int.Parse(Console.ReadLine());
+//    double A = 1;
+//    for (int j = 1;j<=k;j++)
+//    {
+//        if (j == 3||j==4) continue;
+//        double s = 0;
+//        for(int i = j;i<=k+1;i++)
+//        {
+//            if(i==1) continue;
+//            s += Math.Pow(i+5,1/3.0) / (i - 1);
+//        }
+//        A *= ((j - 4) * j / (j-3))*s;
+//    }
+//    Console.WriteLine($"s={A:F2}");
+//}
+//catch(Exception e)
+//{
+//    Console.WriteLine(e.Message);
+//}
+
+// 3.3
+//try
+//{
+//    Console.Write("Введите n:");
+//    int n = int.Parse(Console.ReadLine());
+//    Console.Write("Введите x:");
+//    double x = double.Parse(Console.ReadLine());
+//    double s = 0;
+//    for(int i = 1; i < n; i++)
+//    {
+//        s += Math.Sin((2*i-1)*Math.Pow(x,2*i-1));
+//    }
+//    Console.WriteLine($"s={s:f2}");
+//}
+//catch (Exception e)
+//{
+//    Console.WriteLine(e.Message);
+//}
+
+//3.4 базовый 30 вариант
+//Console.WriteLine("|        x       |       y      |");
+//Console.WriteLine("---------------------------------");
+//for (double x = 1.1; x <= 3.1; x+=0.2)
+//{
+//    double y = 3 * x - 2 * Math.Log(x) - 5;
+//    Console.WriteLine($"|      {x:f1}      |      {y:f2}   |");
+//}
+//Console.WriteLine("--------------------------------");
+//3.4 средний
+Console.WriteLine("|        x       |       y      |");
+Console.WriteLine("---------------------------------");
+for (double x = -Math.PI/4; x <= 7*Math.PI/4; x += 0.2)
 {
-    Console.Write("Введите k:");
-    int k = int.Parse(Console.ReadLine());
-    double A = 1;
-    for (int j = 1;j<=k;j++)
-    {
-        if (j == 3||j==4) continue;
-        double s = 0;
-        for(int i = j;i<=k+1;i++)
-        {
-            if(i==1) continue;
-            s += Math.Pow(i+5,1/3.0) / (i - 1);
-        }
-        A *= ((j - 4) * j / (j-3))*s;
-    }
-    Console.WriteLine($"s={A:F2}");
+
+    double y;
+    if (x > 2.5) y = Math.Cos(2.3 * x + 1);
+    else if (x >= 0 && x <= 2.5) y = 3 * Math.Log(Math.Abs(1-x*x*x));
+    else y = x*x;
+    Console.WriteLine($"|      {x:f1}      |      {y:f2}   |");
 }
-catch(Exception e)
-{
-    Console.WriteLine(e.Message);
-}
+Console.WriteLine("--------------------------------");
+//3.4 высокий
