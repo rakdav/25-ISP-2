@@ -201,12 +201,12 @@
 //    Console.WriteLine($"|      {x:f1}      |      {y:f2}   |");
 //}
 //Console.WriteLine("--------------------------------");
+
 //3.4 высокий
 Console.WriteLine("|        x       |       y      |");
 Console.WriteLine("---------------------------------");
 for (double x = -1; x <= 2; x += 0.3)
 {
-
     double y;
     if (x > 0)
     {
