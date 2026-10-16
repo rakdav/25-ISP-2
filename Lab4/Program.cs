@@ -129,25 +129,25 @@
 //}
 
 //Сформировать и вывести на экран массив, элементы которого заданы случайным образом на интервале [-19, 26] (размерность вводится с клавиатуры). Найти произведение элементов с нечетными номерами.
-try
-{
-    Console.Write("Введите размер массива:");
-    int n = int.Parse(Console.ReadLine());
-    int[] mas = new int[n];
-    Random rnd = new Random();
-    int p = 1;
-    for (int i = 0; i < mas.Length; i++)
-    {
-        mas[i] = rnd.Next(-13, 12);
-        Console.Write($"{mas[i]} ");
-        if(i%2!=0)p *= mas[i];
-    }
-    Console.Write($"s={p}");
-}
-catch (Exception e)
-{
-    Console.WriteLine(e.Message);
-}
+//try
+//{
+//    Console.Write("Введите размер массива:");
+//    int n = int.Parse(Console.ReadLine());
+//    int[] mas = new int[n];
+//    Random rnd = new Random();
+//    int p = 1;
+//    for (int i = 0; i < mas.Length; i++)
+//    {
+//        mas[i] = rnd.Next(-13, 12);
+//        Console.Write($"{mas[i]} ");
+//        if(i%2!=0)p *= mas[i];
+//    }
+//    Console.Write($"s={p}");
+//}
+//catch (Exception e)
+//{
+//    Console.WriteLine(e.Message);
+//}
 
 //В заданном одномерном  массиве, состоящем из n целых чисел, подсчитать количество нулей.
 
