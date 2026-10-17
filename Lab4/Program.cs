@@ -208,50 +208,67 @@
 //Console.WriteLine($"Сумма мин.элемента {min:F2} и его индекса {index}:{min+index:f2}");
 
 //30 вариант Средний уровень
-Random random = new Random();
-double[] mas1 = new double[random.Next(10,20)];
-double[] mas2 = new double[random.Next(10, 20)];
+//Random random = new Random();
+//double[] mas1 = new double[random.Next(10,20)];
+//double[] mas2 = new double[random.Next(10, 20)];
 
-for (int i = 0; i < mas1.Length; i++)
+//for (int i = 0; i < mas1.Length; i++)
+//{
+//    mas1[i] = random.NextDouble() * 100;
+//    Console.Write($"{mas1[i]:F2} ");
+//}
+//Console.WriteLine();
+//for (int i = 0; i < mas2.Length; i++)
+//{
+//    mas2[i] = random.NextDouble() * 100;
+//    Console.Write($"{mas2[i]:F2} ");
+//}
+//Console.WriteLine();
+//double min1 = mas1[0];
+//int index1 = 0;
+//for (int i = 1; i < mas1.Length; i++)
+//{
+//    if (mas1[i] < min1)
+//    {
+//        min1 = mas1[i]; index1 = i;
+//    }
+//}
+//double min2 = mas2[0];
+//int index2 = 0;
+//for (int i = 1; i < mas2.Length; i++)
+//{
+//    if (mas2[i] < min2)
+//    {
+//        min2 = mas2[i]; index2 = i;
+//    }
+//}
+//mas1[index1]=min2;
+//mas2[index2] = min1;
+//Console.WriteLine($"{min1:f2}-{index1}");
+//Console.WriteLine($"{min2:f2}-{index2}");
+//for (int i = 0; i < mas1.Length; i++)
+//{
+//    Console.Write($"{mas1[i]:F2} ");
+//}
+//Console.WriteLine();
+//for (int i = 0; i < mas2.Length; i++)
+//{
+//    Console.Write($"{mas2[i]:F2} ");
+//}
+
+//30 вариант Высокий уровень
+Random random=new Random();
+int[] mas = new int[3];
+for (int i = 0; i < 3; i++)
 {
-    mas1[i] = random.NextDouble() * 100;
-    Console.Write($"{mas1[i]:F2} ");
+    mas[i]=random.Next(10,100);
+    Console.Write($"{mas[i]} ");
 }
 Console.WriteLine();
-for (int i = 0; i < mas2.Length; i++)
+string[] str = new string[3];
+for(int i = 0;i < str.Length;i++)
 {
-    mas2[i] = random.NextDouble() * 100;
-    Console.Write($"{mas2[i]:F2} ");
+    str[i] = Convert.ToString(mas[i],2);
+    Console.Write($"{str[i]} ");
 }
 Console.WriteLine();
-double min1 = mas1[0];
-int index1 = 0;
-for (int i = 1; i < mas1.Length; i++)
-{
-    if (mas1[i] < min1)
-    {
-        min1 = mas1[i]; index1 = i;
-    }
-}
-double min2 = mas2[0];
-int index2 = 0;
-for (int i = 1; i < mas2.Length; i++)
-{
-    if (mas2[i] < min2)
-    {
-        min2 = mas2[i]; index2 = i;
-    }
-}
-mas1[index1]=min2;
-mas2[index2] = min1;
-Console.WriteLine($"{min1:f2}-{index1}");
-Console.WriteLine($"{min2:f2}-{index2}");
-for (int i = 0; i < mas1.Length; i++)
-{
-    Console.Write($"{mas1[i]:F2} ");
-}
-Console.WriteLine();
-for (int i = 0; i < mas2.Length; i++)
-{
-    Console.Write($"{mas2[i]:F2} ");
-}
