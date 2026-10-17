@@ -132,7 +132,7 @@
 //try
 //{
 //    Console.Write("Введите размер массива:");
-//    int n = int.Parse(Console.ReadLine());
+//    int n = int.Parse(Console.ReadLine()!);
 //    int[] mas = new int[n];
 //    Random rnd = new Random();
 //    int p = 1;
@@ -140,7 +140,7 @@
 //    {
 //        mas[i] = rnd.Next(-13, 12);
 //        Console.Write($"{mas[i]} ");
-//        if(i%2!=0)p *= mas[i];
+//        if (i % 2 != 0) p *= mas[i];
 //    }
 //    Console.Write($"s={p}");
 //}
@@ -151,13 +151,107 @@
 
 //В заданном одномерном  массиве, состоящем из n целых чисел, подсчитать количество нулей.
 
-    Random rnd = new Random();
-    int[] mas = new int[rnd.Next(10,30)];
-    int count = 0;
-    for (int i = 0; i < mas.Length; i++)
+//Random rnd = new Random();
+//int[] mas = new int[rnd.Next(10,30)];
+//int count = 0;
+//for (int i = 0; i < mas.Length; i++)
+//{
+//    mas[i] = rnd.Next(-5, 5);
+//    Console.Write($"{mas[i]} ");
+//    if (mas[i]==0) count++;
+//}
+//Console.Write($"Количество нулей {count}");
+
+//string? name = null;
+//Console.WriteLine(name);
+//int n = int.Parse(Console.ReadLine()!);
+//Оператор!(null - forgiving operator) позволяет указать, что переменная ссылочного типа не равна null
+
+//int? val = null;
+//Console.WriteLine(val);
+
+//int? x = 5;
+////int z = x + 7;
+//int? w = x + 7;
+//int d = x.Value + 7;
+
+//Оператор ??
+//Оператор ?? называется оператором null-объединения. Он применяется для установки значений по умолчанию для типов, которые допускают значение null:
+//левый_операнд ?? правый_операнд
+//Оператор ?? возвращает левый операнд, если этот операнд не равен null. Иначе возвращается правый операнд. При этом левый операнд должен принимать null.
+//string? text = "Sam";
+//string name = text ?? "Tom";
+//Console.WriteLine(name);
+
+//int? id = null;
+//int personId = id ?? 1;
+//Console.WriteLine(personId);
+
+//30 вариант Базовый уровень
+//Random random=new Random();
+//double[] mas=new double[12];
+//for (int i = 0; i < mas.Length; i++)
+//{
+//    mas[i] = random.NextDouble() * 100;
+//    Console.Write($"{mas[i]:F2} ");
+//}
+//Console.WriteLine();
+//double min = mas[0];
+//int index = 0;
+//for (int i = 1; i < mas.Length; i++)
+//{
+//    if (mas[i] < min)
+//    {
+//        min= mas[i]; index = i;
+//    }
+//}
+//Console.WriteLine($"Сумма мин.элемента {min:F2} и его индекса {index}:{min+index:f2}");
+
+//30 вариант Средний уровень
+Random random = new Random();
+double[] mas1 = new double[random.Next(10,20)];
+double[] mas2 = new double[random.Next(10, 20)];
+
+for (int i = 0; i < mas1.Length; i++)
+{
+    mas1[i] = random.NextDouble() * 100;
+    Console.Write($"{mas1[i]:F2} ");
+}
+Console.WriteLine();
+for (int i = 0; i < mas2.Length; i++)
+{
+    mas2[i] = random.NextDouble() * 100;
+    Console.Write($"{mas2[i]:F2} ");
+}
+Console.WriteLine();
+double min1 = mas1[0];
+int index1 = 0;
+for (int i = 1; i < mas1.Length; i++)
+{
+    if (mas1[i] < min1)
     {
-        mas[i] = rnd.Next(-5, 5);
-        Console.Write($"{mas[i]} ");
-        if (mas[i]==0) count++;
+        min1 = mas1[i]; index1 = i;
     }
-    Console.Write($"Количество нулей {count}");
+}
+double min2 = mas2[0];
+int index2 = 0;
+for (int i = 1; i < mas2.Length; i++)
+{
+    if (mas2[i] < min2)
+    {
+        min2 = mas2[i]; index2 = i;
+    }
+}
+mas1[index1]=min2;
+mas2[index2] = min1;
+Console.WriteLine($"{min1:f2}-{index1}");
+Console.WriteLine($"{min2:f2}-{index2}");
+for (int i = 0; i < mas1.Length; i++)
+{
+    Console.Write($"{mas1[i]:F2} ");
+}
+Console.WriteLine();
+for (int i = 0; i < mas2.Length; i++)
+{
+    Console.Write($"{mas2[i]:F2} ");
+}
