@@ -4,5 +4,6 @@
   <Project Path="Lab2/Lab2.csproj" Id="c7d26297-8103-4e1c-96f8-ea5f93d45d81" />
   <Project Path="lab3/lab3.csproj" Id="3ef17ce0-85dd-4b8a-8b09-03b981acd1bd" />
   <Project Path="Lab4/Lab4.csproj" Id="0f88b0b4-9108-49b9-a92b-d0c6bddccd8d" />
+  <Project Path="lab4_2/lab4_2.csproj" Id="4caaf62e-fe28-44b1-87bf-e0d6023490c0" />
   <Project Path="lesson1/lesson1.csproj" />
 </Solution>
