@@ -91,76 +91,103 @@
 //Console.WriteLine($"Количество отрицательных элементов во втором столбце {count}");
 
 //30 вариант средний уровень
-try
+//try
+//{
+//    Random rnd = new Random();
+//    Console.Write("Введите количество строк:");
+//    int n = int.Parse(Console.ReadLine()!);
+//    Console.Write("Введите количество столбцов:");
+//    int m = int.Parse(Console.ReadLine()!);
+//    int[,] mas = new int[n, m];
+//    for (int i = 0; i < mas.GetLength(0); i++)
+//    {
+//        for (int j = 0; j < mas.GetLength(1); j++)
+//        {
+//            mas[i, j] = rnd.Next(1, 10);
+//            Console.Write($"{mas[i, j]} ");
+//        }
+//        Console.WriteLine();
+//    }
+//    Console.WriteLine();
+//    for (int i = 0; i < mas.GetLength(0); i++)
+//    { 
+//        for (int j = 0; j < mas.GetLength(1)-1; j++)
+//        {
+//            for(int k = j + 1; k < mas.GetLength(1); k++)
+//            {
+//                if (mas[i, j] > mas[i,k])
+//                {
+//                    int temp = mas[i, j];
+//                    mas[i, j] = mas[i, k];
+//                    mas[i, k] = temp;
+//                }
+//            }
+//        }
+//    }
+//    Console.WriteLine();
+//    for (int i = 0; i < mas.GetLength(0); i++)
+//    {
+//        for (int j = 0; j < mas.GetLength(1); j++)
+//        {
+//            Console.Write($"{mas[i, j]} ");
+//        }
+//        Console.WriteLine();
+//    }
+//    Console.WriteLine();
+//    int max = -1;
+//    int row = -1;
+//    for (int i = 0; i < mas.GetLength(0); i++)
+//    {
+//        int k = 1;
+//        int maxk = 0;
+//        for (int j = 1; j < mas.GetLength(1); j++)
+//        {
+//            if (mas[i, j - 1] == mas[i, j]) k++;
+//            else
+//            {
+//                int temp = k;
+//                if (temp>maxk) maxk = temp;
+//                k = 1;
+//            }
+//        }
+//        Console.WriteLine(maxk);
+//        if (maxk > max)
+//        {
+//            max = maxk;
+//            row= i;
+//        }
+//    }
+//    Console.WriteLine();
+//    Console.WriteLine(row);
+//}
+//catch (Exception e)
+//{
+//    Console.WriteLine(e.Message);
+//}
+
+//30 вариант высокий уровень
+using System.Net.Security;
+
+int[,] mas = new int[5, 5];
+for (int i = 0; i < mas.GetLength(0); i++)
 {
-    Random rnd = new Random();
-    Console.Write("Введите количество строк:");
-    int n = int.Parse(Console.ReadLine()!);
-    Console.Write("Введите количество столбцов:");
-    int m = int.Parse(Console.ReadLine()!);
-    int[,] mas = new int[n, m];
-    for (int i = 0; i < mas.GetLength(0); i++)
-    {
-        for (int j = 0; j < mas.GetLength(1); j++)
-        {
-            mas[i, j] = rnd.Next(1, 10);
-            Console.Write($"{mas[i, j]} ");
-        }
-        Console.WriteLine();
-    }
+	for (int j = 0; j < mas.GetLength(1); j++)
+	{
+		mas[i, j] = 1;
+		Console.Write($"{mas[i,j]} ");
+	}
     Console.WriteLine();
-    for (int i = 0; i < mas.GetLength(0); i++)
-    { 
-        for (int j = 0; j < mas.GetLength(1)-1; j++)
-        {
-            for(int k = j + 1; k < mas.GetLength(1); k++)
-            {
-                if (mas[i, j] > mas[i,k])
-                {
-                    int temp = mas[i, j];
-                    mas[i, j] = mas[i, k];
-                    mas[i, k] = temp;
-                }
-            }
-        }
-    }
-    Console.WriteLine();
-    for (int i = 0; i < mas.GetLength(0); i++)
-    {
-        for (int j = 0; j < mas.GetLength(1); j++)
-        {
-            Console.Write($"{mas[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-    int max = -1;
-    int row = -1;
-    for (int i = 0; i < mas.GetLength(0); i++)
-    {
-        int k = 1;
-        int maxk = 0;
-        for (int j = 1; j < mas.GetLength(1); j++)
-        {
-            if (mas[i, j - 1] == mas[i, j]) k++;
-            else
-            {
-                int temp = k;
-                if (temp>maxk) maxk = temp;
-                k = 1;
-            }
-        }
-        Console.WriteLine(maxk);
-        if (maxk > max)
-        {
-            max = maxk;
-            row= i;
-        }
-    }
-    Console.WriteLine();
-    Console.WriteLine(row);
 }
-catch (Exception e)
+Console.WriteLine();
+mas[1, 2] = 0;
+mas[3, 2] = 0;
+mas[2, 1] = 0;
+mas[2, 3] = 0;
+for (int i = 0; i < mas.GetLength(0); i++)
 {
-    Console.WriteLine(e.Message);
+    for (int j = 0; j < mas.GetLength(1); j++)
+    {
+        Console.Write($"{mas[i, j]} ");
+    }
+    Console.WriteLine();
 }
