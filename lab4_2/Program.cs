@@ -166,7 +166,6 @@
 //}
 
 //30 вариант высокий уровень
-using System.Net.Security;
 
 int[,] mas = new int[5, 5];
 for (int i = 0; i < mas.GetLength(0); i++)

@@ -84,26 +84,26 @@
 //}
 
 //отсортировать элементы массива по возрастанию
-//Random rnd=new Random();
-//int[] mas = new int[rnd.Next(10,20)];
-//for(int i = 0; i < mas.Length; i++)
-//{
-//    mas[i] = rnd.Next(10,100);
-//    Console.Write($"{mas[i]} ");
-//}
-//Console.WriteLine();
-//for (int i = 0; i < mas.Length-1; i++)
-//{
-//    for (int j = i+1; j < mas.Length; j++)
-//    {
-//        if (mas[i] > mas[j])
-//        {
-//            int temp = mas[i];
-//            mas[i]=mas[j];
-//            mas[j]=temp;
-//        }
-//    }
-//}
+Random rnd = new Random();
+int[] mas = new int[rnd.Next(10, 20)];
+for (int i = 0; i < mas.Length; i++)
+{
+    mas[i] = rnd.Next(10, 100);
+    Console.Write($"{mas[i]} ");
+}
+Console.WriteLine();
+for (int i = 0; i < mas.Length - 1; i++)
+{
+    for (int j = i + 1; j < mas.Length; j++)
+    {
+        if (mas[i] > mas[j])
+        {
+            int temp = mas[i];
+            mas[i] = mas[j];
+            mas[j] = temp;
+        }
+    }
+}
 //foreach (int i in mas) Console.Write($"{i} ");
 //Console.WriteLine();
 
