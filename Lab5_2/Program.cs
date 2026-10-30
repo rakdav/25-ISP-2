@@ -15,11 +15,11 @@
 //Console.WriteLine(text);
 
 //30 средний уровень
-using System.Text.RegularExpressions;
-string pattern = @"\b(sin|cos|log)\b";
-Console.WriteLine("Введите строку:");
-string text=Console.ReadLine()!;
-string result = Regex.Replace(text, pattern, "$1(", RegexOptions.IgnoreCase);
-Console.WriteLine(result);
+//using System.Text.RegularExpressions;
+//string pattern = @"\b(sin|cos|log)\b";
+//Console.WriteLine("Введите строку:");
+//string text=Console.ReadLine()!;
+//string result = Regex.Replace(text, pattern, "$1(", RegexOptions.IgnoreCase);
+//Console.WriteLine(result);
 
 
