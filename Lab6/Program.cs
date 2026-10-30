@@ -42,6 +42,13 @@ void Print(int[] mas)
     }
     Console.WriteLine();
 }
+
+long Factorial(int n)
+{
+    long f = 1;
+    for (int i = 1; i < n; i++) f *= i;
+    return f;
+}
 //double y = (Math.Sqrt(6) + 6) / 2 + (Math.Sqrt(13) + 13) / 2 + (Math.Sqrt(21) + 21) / 2;
 //double y = DoFunc(6) + DoFunc(13) + DoFunc(21);
 //Console.WriteLine($"y={y:F2}");
@@ -58,11 +65,14 @@ void Print(int[] mas)
 //    Console.WriteLine(e.Message);
 //}
 
-int[] mas1= new int[8];
-int[] mas2= new int[8];
-mas1 = GetMas(mas1);
-mas2 = GetMas(mas2);
-Print(mas1);
-Print(mas2);
+//int[] mas1= new int[8];
+//int[] mas2= new int[8];
+//mas1 = GetMas(mas1);
+//mas2 = GetMas(mas2);
+//Print(mas1);
+//Print(mas2);
+//Console.WriteLine($"Количество четных в первой {OddCount(mas1)}");
+//Console.WriteLine($"Количество нечетных во второй {EvenCount(mas1)}");
 
-
+double y = (2*Factorial(5)+3*Factorial(8)) / (Factorial(6)+Factorial(4));
+Console.WriteLine($"y={y:f2}");
