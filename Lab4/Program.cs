@@ -84,26 +84,26 @@
 //}
 
 //отсортировать элементы массива по возрастанию
-Random rnd = new Random();
-int[] mas = new int[rnd.Next(10, 20)];
-for (int i = 0; i < mas.Length; i++)
-{
-    mas[i] = rnd.Next(10, 100);
-    Console.Write($"{mas[i]} ");
-}
-Console.WriteLine();
-for (int i = 0; i < mas.Length - 1; i++)
-{
-    for (int j = i + 1; j < mas.Length; j++)
-    {
-        if (mas[i] > mas[j])
-        {
-            int temp = mas[i];
-            mas[i] = mas[j];
-            mas[j] = temp;
-        }
-    }
-}
+//Random rnd = new Random();
+//int[] mas = new int[rnd.Next(10, 20)];
+//for (int i = 0; i < mas.Length; i++)
+//{
+//    mas[i] = rnd.Next(10, 100);
+//    Console.Write($"{mas[i]} ");
+//}
+//Console.WriteLine();
+//for (int i = 0; i < mas.Length - 1; i++)
+//{
+//    for (int j = i + 1; j < mas.Length; j++)
+//    {
+//        if (mas[i] > mas[j])
+//        {
+//            int temp = mas[i];
+//            mas[i] = mas[j];
+//            mas[j] = temp;
+//        }
+//    }
+//}
 //foreach (int i in mas) Console.Write($"{i} ");
 //Console.WriteLine();
 
@@ -257,18 +257,73 @@ for (int i = 0; i < mas.Length - 1; i++)
 //}
 
 //30 вариант Высокий уровень
-Random random=new Random();
-int[] mas = new int[3];
-for (int i = 0; i < 3; i++)
-{
-    mas[i]=random.Next(10,100);
-    Console.Write($"{mas[i]} ");
-}
-Console.WriteLine();
-string[] str = new string[3];
-for(int i = 0;i < str.Length;i++)
-{
-    str[i] = Convert.ToString(mas[i],2);
-    Console.Write($"{str[i]} ");
-}
-Console.WriteLine();
+//Random random=new Random();
+//int[] mas = new int[3];
+//for (int i = 0; i < 3; i++)
+//{
+//    mas[i]=random.Next(10,100);
+//    Console.Write($"{mas[i]} ");
+//}
+//Console.WriteLine();
+//string[] str = new string[3];
+//for(int i = 0;i < str.Length;i++)
+//{
+//    str[i] = Convert.ToString(mas[i],2);
+//    Console.Write($"{str[i]} ");
+//}
+//Console.WriteLine();
+
+//int[] a=new int[5];
+//Random r=new Random();
+//for (int i = 0; i < a.Length; i++)
+//{
+//    a[i] = r.Next(1, 10);
+//    Console.Write(a[i]+" ");
+//}
+//Console.WriteLine();
+//Array.Clear(a);
+//for (int i = 0; i < a.Length; i++)
+//{
+//    Console.Write(a[i] + " ");
+//}
+//Console.WriteLine();
+//int[] b=new int[5];
+//a.CopyTo(b);
+//for (int i = 0; i < b.Length; i++)
+//{
+//    Console.Write(b[i] + " ");
+//}
+//Console.WriteLine();
+//Array.Sort(b);
+//for (int i = 0; i < b.Length; i++)
+//{
+//    Console.Write(b[i] + " ");
+//}
+//Console.WriteLine();
+
+using System.Text.RegularExpressions;
+
+//string s = "Бык тупогуб, тупогубенький бычок, у быка губа бела была тупа";
+//Regex regex=new Regex(@"туп(\w*)");
+//MatchCollection matches = regex.Matches(s);
+//if(matches.Count > 0)
+//{
+//    foreach(Match match in matches)
+//        Console.WriteLine(match.Value);
+//}
+//else Console.WriteLine("Нет совпадений");
+
+//string s = "456-435-23186";
+//string pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}$";
+
+//if (Regex.IsMatch(s, pattern, RegexOptions.IgnoreCase))
+//    Console.WriteLine("OK");
+//else Console.WriteLine("No");
+
+string s = "daria@mail.ru";
+string pattern = @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
+
+if (Regex.IsMatch(s, pattern, RegexOptions.IgnoreCase))
+    Console.WriteLine("OK");
+else Console.WriteLine("No");
