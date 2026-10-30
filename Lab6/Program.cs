@@ -49,6 +49,17 @@ long Factorial(int n)
     for (int i = 1; i < n; i++) f *= i;
     return f;
 }
+
+int DayCount(int g,int m)
+{
+    switch(m)
+    {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12: return 31;
+        case 2: if (g % 4 == 0) return 29;
+                return 28;
+        default: return 30;
+    }
+}
 //double y = (Math.Sqrt(6) + 6) / 2 + (Math.Sqrt(13) + 13) / 2 + (Math.Sqrt(21) + 21) / 2;
 //double y = DoFunc(6) + DoFunc(13) + DoFunc(21);
 //Console.WriteLine($"y={y:F2}");
@@ -74,5 +85,5 @@ long Factorial(int n)
 //Console.WriteLine($"Количество четных в первой {OddCount(mas1)}");
 //Console.WriteLine($"Количество нечетных во второй {EvenCount(mas1)}");
 
-double y = (2*Factorial(5)+3*Factorial(8)) / (Factorial(6)+Factorial(4));
-Console.WriteLine($"y={y:f2}");
+//double y = (2*Factorial(5)+3*Factorial(8)) / (Factorial(6)+Factorial(4));
+//Console.WriteLine($"y={y:f2}");
