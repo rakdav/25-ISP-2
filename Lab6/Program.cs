@@ -1,4 +1,6 @@
-﻿double DoFunc(int x)
+﻿using System.Runtime.InteropServices;
+
+double DoFunc(int x)
 {
     return (Math.Sqrt(x) + x) / 2;
 }
@@ -60,6 +62,31 @@ int DayCount(int g,int m)
         default: return 30;
     }
 }
+
+void Increment(int n)//передача параметров по значению
+{
+    n++;
+    Console.WriteLine($"Число в методе Increment: {n}");
+}
+//При передаче аргументов параметрам по значению параметр метода получает не саму переменную, а ее копию и далее работает с этой копией независимо от самой переменной.
+void Swap(int a,int b)
+{
+    int temp=a; 
+    a=b; 
+    b=temp;
+}
+//При передаче значений параметрам по ссылке метод получает адрес переменной в памяти. И, таким образом, если в методе изменяется значение параметра, передаваемого по ссылке, то также изменяется и значение переменной, которая передается на его место.
+void SwapRef(ref int a,ref int b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+//Выходные параметры. Модификатор out
+void Sum(int x,int y,out int result)
+{
+    result = x + y;
+}
 //double y = (Math.Sqrt(6) + 6) / 2 + (Math.Sqrt(13) + 13) / 2 + (Math.Sqrt(21) + 21) / 2;
 //double y = DoFunc(6) + DoFunc(13) + DoFunc(21);
 //Console.WriteLine($"y={y:F2}");
@@ -87,3 +114,10 @@ int DayCount(int g,int m)
 
 //double y = (2*Factorial(5)+3*Factorial(8)) / (Factorial(6)+Factorial(4));
 //Console.WriteLine($"y={y:f2}");
+int x = 5;
+int y = 6;
+Console.WriteLine($"x={x} y={y}");
+Swap(x, y);
+Console.WriteLine($"x={x} y={y}");
+SwapRef(ref x,ref y);
+Console.WriteLine($"x={x} y={y}");
