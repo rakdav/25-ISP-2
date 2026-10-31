@@ -48,10 +48,15 @@ void Print(int[] mas)
 long Factorial(int n)
 {
     long f = 1;
-    for (int i = 1; i < n; i++) f *= i;
+    for (int i = 1; i <=n; i++) f *= i;
     return f;
 }
 
+long RecursiveFactorial(int n)
+{
+    if (n == 0 || n == 1) return 1;
+    return n * RecursiveFactorial(n - 1);
+}
 int DayCount(int g,int m)
 {
     switch(m)
@@ -87,6 +92,26 @@ void Sum(int x,int y,out int result)
 {
     result = x + y;
 }
+
+//Входные параметры. Модификатор in
+//Модификатор in указывает, что данный параметр будет передаваться в метод по ссылке, однако внутри метода его значение параметра нельзя будет изменить. 
+void GetRevtangleData(in int width,in int height,out int rectArea,out int rectPerimetr)
+{
+    //width = 67;
+    rectArea = width * height;
+    rectPerimetr = (width + height) * 2;
+}
+//Массив параметров и ключевое слово params
+void Summa(params int[] mas)
+{
+    int result = 0;
+    foreach(int i in mas) result+= i;
+    Console.WriteLine(result);
+}
+
+//Рекурсия
+
+
 //double y = (Math.Sqrt(6) + 6) / 2 + (Math.Sqrt(13) + 13) / 2 + (Math.Sqrt(21) + 21) / 2;
 //double y = DoFunc(6) + DoFunc(13) + DoFunc(21);
 //Console.WriteLine($"y={y:F2}");
@@ -114,10 +139,41 @@ void Sum(int x,int y,out int result)
 
 //double y = (2*Factorial(5)+3*Factorial(8)) / (Factorial(6)+Factorial(4));
 //Console.WriteLine($"y={y:f2}");
-int x = 5;
-int y = 6;
-Console.WriteLine($"x={x} y={y}");
-Swap(x, y);
-Console.WriteLine($"x={x} y={y}");
-SwapRef(ref x,ref y);
-Console.WriteLine($"x={x} y={y}");
+//int x = 5;
+//int y = 6;
+//Console.WriteLine($"x={x} y={y}");
+//Swap(x, y);
+//Console.WriteLine($"x={x} y={y}");
+//SwapRef(ref x,ref y);
+//Console.WriteLine($"x={x} y={y}");
+//int number;
+//Sum(15,10,out number);
+//Console.WriteLine(number);
+//try
+//{
+//    int x = int.Parse(Console.ReadLine()!);
+//}
+//catch(Exception e)
+//{
+//    Console.WriteLine(e.Message);
+//}
+
+//int x;
+//Console.Write("Введите x:");
+//int.TryParse(Console.ReadLine(), out x);
+//Console.WriteLine(x);
+
+//int w = 10;
+//int h = 20;
+//int area, perimetr;
+//GetRevtangleData(w, h, out area, out perimetr);
+//Console.WriteLine($"Площадь прямоугольника: {area}");
+//Console.WriteLine($"Периметр прямоугольника: {perimetr}");
+
+//int[] nums = { 1, 2, 3, 4, 5 };
+//Summa(nums);
+//Summa(1, 4, 6, 4, 3, 89);
+//Summa(4, 6, 46, 6);
+
+Console.WriteLine(Factorial(6));
+Console.WriteLine(RecursiveFactorial(6));
