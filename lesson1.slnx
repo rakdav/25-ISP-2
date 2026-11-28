@@ -1,0 +1,24 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Lab1_1/Lab1_1.csproj" />
+  <Project Path="Lab1_2/Lab1_2.csproj" Id="dad98ea8-08cb-4707-8bdb-b6aed0f307be" />
+  <Project Path="Lab2/Lab2.csproj" Id="c7d26297-8103-4e1c-96f8-ea5f93d45d81" />
+  <Project Path="lab3/lab3.csproj" Id="3ef17ce0-85dd-4b8a-8b09-03b981acd1bd" />
+  <Project Path="Lab4/Lab4.csproj" Id="0f88b0b4-9108-49b9-a92b-d0c6bddccd8d" />
+  <Project Path="lab4_2/lab4_2.csproj" Id="4caaf62e-fe28-44b1-87bf-e0d6023490c0" />
+  <Project Path="Lab5_1/Lab5_1.csproj" Id="5af58088-9966-4a9d-a379-95e5ef3ae5b8" />
+  <Project Path="Lab5_2/Lab5_2.csproj" Id="bd3e87a3-6223-4fc8-be1c-209df8c22c30" />
+  <Project Path="Lab6/Lab6.csproj" Id="7521a6b3-fc9c-40f5-b29e-c220df2318e0" />
+  <Project Path="lab7/lab7.csproj" Id="c8516368-73cf-4e6d-9115-af55c0ec1417" />
+  <Project Path="Lab7_1Sh/Lab7_1Sh.csproj" Id="4fa5815d-4a60-4357-88d3-aef95c0ac619" />
+  <Project Path="Lab8/Lab8.csproj" Id="9bddd670-e3c3-4681-8a38-e3b369ea9c9f" />
+  <Project Path="Lab9/Lab9.csproj" Id="934211f4-9dea-4ba8-93ca-2331aa6858b7" />
+  <Project Path="lab9_1/lab9_1.csproj" Id="32addd67-5e7e-4a71-847a-8ce4af94a35c" />
+  <Project Path="lab_6_1/lab_6_1.csproj" Id="f74a98df-d0bb-4646-bea1-710d23b63934" />
+  <Project Path="lesson1/lesson1.csproj" />
+  <Project Path="OurLibrary/OurLibrary.csproj" Id="d038535b-49e6-49f6-8fc9-66bea73825e3" />
+</Solution>
